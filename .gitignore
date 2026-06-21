@@ -1,0 +1,68 @@
+# ── Private research notes and course materials ──────────────────────────────
+docs/
+docs.zip
+Deliverables/
+Literature/
+Meetings/
+CLAUDE.md
+AGENTS.md
+Gemini.md
+
+# ── Agent tool directories ────────────────────────────────────────────────────
+.antigravitycli/
+.claude/
+.codex/
+OverleafMCP/
+
+# ── Misc project-root files ───────────────────────────────────────────────────
+*.png
+*.txt
+*.pdf
+_daic_timing_check.py
+
+# ── Experiment artifacts ──────────────────────────────────────────────────────
+experiments/
+
+# ── Excluded code directories ─────────────────────────────────────────────────
+# Supervisor reference code (read-only, not ours to publish)
+Code/Jiahua/
+Code/SFM/
+# Licensed dataset files (ThinkOnward Image Impeccable, F3)
+Code/Dataset/
+Code/*.zip
+
+# External DINOv3 backbone (Meta's code — referenced by commit in README)
+Code/DINOv3/external/
+
+# Pre-trained weights and checkpoints
+Code/DINOv3/weights/
+*.pt
+*.pth
+
+# Data files
+*.npy
+*.dat
+*.sgy
+*.hdf5
+*.h5
+
+# ── Python ────────────────────────────────────────────────────────────────────
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# ── Environment ───────────────────────────────────────────────────────────────
+.env
+.venv
+venv/
+*.log
+
+# ── OS ───────────────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db

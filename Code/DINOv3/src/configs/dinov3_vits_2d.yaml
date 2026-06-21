@@ -1,0 +1,29 @@
+﻿model:
+  name: dinov3_vits16
+  weights: ../../weights/dinov3_vits16_pretrain_lvd1689m-08c60483.pth
+  lora_rank: 16
+  lora_alpha: 64
+  lora_dropout: 0.1
+  # DINOv3 fuses Q/K/V into a single 'qkv' layer; output proj is 'proj'.
+  # This targets the same 4 attention matrices as the paper's q/k/v/o_proj.
+  lora_targets: [qkv, proj]
+
+data:
+  label_dir: ../../../Dataset/Denoise/label
+  seismic_dir: ../../../Dataset/Denoise/seismic
+  field_dir: ../../../Dataset/Denoise/field
+  val_split: 0.1
+  seed: 42
+  mode: "2d"
+
+training:
+  epochs: 50
+  batch_size: 16
+  lr: 1.0e-4
+  weight_decay: 0.01
+  warmup_epochs: 5
+  loss_lambda: 0.5
+  num_workers: 0
+
+output:
+  checkpoint_dir: ../../../../experiments/runs/2d/sfm_baseline
